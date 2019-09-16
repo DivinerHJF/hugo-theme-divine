@@ -1,0 +1,26 @@
+{{ partial "header.html" . }}
+
+<div class="wrap">
+  {{ partial "navbar.html" . }}
+  <main class="hiruko-container">
+    <div class="all-categories widget">
+      <h3 class="aside-title">ALL CATEGORIES</h3>
+      <div class="all-tags-box">
+        {{range $name, $taxonomy := .Site.Taxonomies.categories}}
+        <a class="category-link" href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>
+        {{end}}
+      </div>
+    </div>
+
+    <div class="all-tags widget">
+      <h3 class="aside-title">ALL TAGS</h3>
+      <div class="all-tags-box">
+        {{range $name, $taxonomy := .Site.Taxonomies.tags}}
+        <a class="tag-link" href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>
+        {{end}}
+      </div>
+    </div>
+  </main>
+</div>
+
+{{ partial "footer.html" . }} {{ partial "after-footer.html" . }}

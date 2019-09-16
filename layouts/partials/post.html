@@ -1,0 +1,39 @@
+<div class="post">
+  <article class="post-block">
+    <h1 class="post-title">{{ .Title }}</h1>
+    <div class="post-info">{{ .Date.Format "Jan 2 2006" }}</div>
+    <div class="post-entry">{{ .Content }}</div>
+
+    <div class="post-tags-box">
+      {{ range $id, $name := .Params.tags }}
+      {{ if $id }},{{ end }}
+      <a class="tag-link" href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a> 
+      {{ end }}
+    </div>
+
+  </article>
+</div>
+
+<div class="post-nav">
+  {{ if .PrevInSection }}
+  <div class="prev-wrap col-md-6 col-xs-6">
+    <i class="fa fa-angle-double-left"></i>
+    <a href="{{.PrevInSection.Permalink}}" class="prev-post">{{.PrevInSection.Title}}</a>
+  </div>
+  {{ end }}
+
+  {{ if .NextInSection }}
+  <div class="next-wrap col-md-6 col-xs-6">
+    <a href="{{.NextInSection.Permalink}}" class="prev-post">{{.NextInSection.Title}}</a>
+    <i class="fa fa-angle-double-right"></i>
+  </div>
+  {{ end }}
+</div>
+
+{{ if eq .Params.comments true }}
+<div class="disqus-comments">
+  <div class="comments">
+    <div id="disqus_thread"></div>
+  </div>
+</div>
+{{ end }}

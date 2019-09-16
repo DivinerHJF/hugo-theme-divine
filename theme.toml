@@ -1,0 +1,12 @@
+name = "Hiruko"
+license = "MIT"
+licenselink = "https://github.com/GenkunAbe/hugo-theme-hiruko/blob/master/LICENSE.md"
+description = "A Powerful, Simple, Clean Theme."
+homepage = "https://github.com/GenkunAbe/hugo-theme-hiruko/"
+tags = ["Powerful", "Simple", "Clean"]
+features = ["MathJax", "Disqus Comments", "Vertical Layout", "Web-fonts"]
+min_version = "0.32.2"
+
+[author]
+  name = "GenkunAbe"
+  homepage = "https://www.genkun.me/"

@@ -1,0 +1,23 @@
+<div class="archive col-md-8 col-xs-12">
+  <div class="post">
+    <article class="post-block">
+        <h1 class="post-title">{{ .Title }}</h1>
+        <div class="post-info">{{ .Date.Format "Jan 2 2006" }}</div>
+        <div class="post-entry">{{ .Content }}</div>
+    </article>
+  </div>
+</div>
+<aside class="sidebar col-md-4 col-xs-12">
+  <div class="aboutme widget">
+    <div class="about-me-image" style="background-image: url('{{ $.Site.Params.AboutMe.ImagePath }}');"></div>
+    <p class="about-me-text">{{ $.Site.Params.AboutMe.Motto }}</p>
+  </div>
+  <div class="follow-me widget">
+    <h3 class="aside-title">FOLLOW ME</h3>
+    <div class="follow-icons">
+      {{- range $item := $.Site.Params.AboutMe.Links }}
+      <a href="{{ index $item 1 }}" target="_blank" class="{{ index $item 0 }}"></a>
+      {{- end }}
+    </div>
+  </div>
+</aside>

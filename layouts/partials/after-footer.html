@@ -1,0 +1,111 @@
+<script src="https://unpkg.com/vanilla-back-to-top@7.2.0/dist/vanilla-back-to-top.min.js"></script>
+<script>
+  addBackToTop({
+    diameter: 56,
+    backgroundColor: 'rgb(255, 82, 82)',
+    textColor: '#fff'
+  })
+</script>
+<script src="/js/scripts.js"></script>
+{{- if eq .Params.image true }}
+<script src="/js/fancybox.js"></script>
+{{- end }}
+
+<script>
+// Pangu
+(function (u, c) {
+    var d = document, t = 'script', o = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(e); }); }
+    s.parentNode.insertBefore(o, s);
+})("{{ $.Site.Params.CDN.Pangu.Path }}/pangu/{{ $.Site.Params.CDN.Pangu.Version }}/pangu.min.js", function () {
+    pangu.spacingPage();
+});
+</script>
+
+{{- if eq .Params.vertical true }}
+<script src="{{ $.Site.Params.CDN.JQueryMouseWheel.Path }}/jquery-mousewheel/{{ $.Site.Params.CDN.JQueryMouseWheel.Version }}/jquery.mousewheel.min.js"></script>
+<script>
+      $('html, body, *').mousewheel(function(e, delta) {
+          this.scrollLeft += (delta * 100);
+          e.preventDefault();
+      });
+</script>
+{{- end }}
+
+{{- if ne .Params.mathjax false }}
+<script src="/js/mathjax.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        extensions: ['tex2jax.js'],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+        },
+        TeX: {
+            extensions: ['AMSmath.js', 'AMSsymbols.js', 'noErrors.js', 'noUndefined.js', 'extpfeil.js']
+        },
+        "HTML-CSS": {
+            availableFonts: ["TeX"],
+            scale: 85
+        },
+        CommonHTML: {
+            scale: 85
+        },
+        SVG: {
+            scale: 85
+        }
+    });
+</script>
+<script async type="text/javascript" src="{{ $.Site.Params.CDN.MathJax.Path }}/mathjax/{{ $.Site.Params.CDN.MathJax.Version }}/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+{{- end }}
+
+{{- if eq .Params.comments true }}
+<script>
+    var url_parts = window.location.href.split("?");
+    var disqus_url = url_parts[0];
+    (function () {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = "//{{ .Site.Params.disqus }}.disqus.com/embed.js";
+        (document.head || d.body).appendChild(dsq);
+    })();
+</script>
+{{- end }}
+
+{{- if isset .Params "codes" }}
+<link rel="stylesheet" href="{{ $.Site.Params.CDN.HighLight.Path }}/highlight.js/{{ $.Site.Params.CDN.HighLight.Version }}/styles/atom-one-light.min.css"/>
+<script src="{{ $.Site.Params.CDN.HighLight.Path }}/highlight.js/{{ $.Site.Params.CDN.HighLight.Version }}/highlight.min.js"></script>
+<script src="{{ $.Site.Params.CDN.HighLightNum.Path }}/highlightjs-line-numbers.js/{{ $.Site.Params.CDN.HighLightNum.Version }}/highlightjs-line-numbers.min.js"></script>
+{{- range .Params.codes }}
+<script src="{{ $.Site.Params.CDN.HighLight.Path }}/highlight.js/{{ $.Site.Params.CDN.HighLight.Version }}/languages/{{ . }}.min.js"></script>
+{{- end }}
+<script>hljs.initHighlightingOnLoad();</script>
+<script>hljs.initLineNumbersOnLoad({
+    singleLine: true
+});</script>
+{{- end }}
+
+{{- if eq .Params.toc true }}
+<script>
+    if (typeof show_toc == 'undefined') {
+        var show_toc = true;
+    }
+    if (show_toc) {
+        $("#toc").tocify({
+            selectors: "h2,h3,h4,h5", // 选择要筛选的标题
+            extendPage: false, // 页面不够长时拉长页面，这里选择关闭因为感觉留出大片空白不好看 - -
+            highlightDefault: true, // 自动高亮第一条
+            highlightOnScroll: true,
+            scrollTo: 80,
+        });
+    }
+</script>
+{{- end }}
+</body>
+</html>
