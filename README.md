@@ -1,51 +1,47 @@
-# HIRUKO
+# DIVINE
 
-A POWERFUL, SIMPLE and CLEAN theme for [Hugo](https://gohugo.io/).
+- [Preview](https://www.divinerhjf.com)
 
-- [Preview](https://blog.genkun.me)
+该主题为 [Huruko](https://github.com/GenkunAbe/hugo-theme-hiruko/) 的魔改版，仅作私人使用。
 
-Inspired by [Prince](https://github.com/yiliashaw/hexo-theme-prince), [Free Mind](http://freemind.pluskid.org/) and [Fate/Typo](https://fatetypo.xyz)
+## 功能
 
-## Features
+- **MathJax 公式支持**
 
-- **MathJax**
+用法：将 `mathjax: true` 加入到文章的 `front-matter` 中。
 
-    Usage: Add `mathjax: true` to the posts which need MathJax rendering.
+- **Disqus 评论系统**
 
-- **Disqus Comments**
-
-    Usage: Add your Disqus id to `config.toml`.
+用法：在 `config.toml` 中加入代码。
 
     ```
     [params]
-        disqus = "genkun"
+        disqus = "your-disqus-username"
     ```
 
-- **Vertical Layout**
+- **直排模式**
 
-    Preview: 
-    
     ![](images/vertical.png)
 
-    Usage: Add `vertical: true` to the posts.
+用法：将 `vertical: true` 加入到文章的 `front-matter` 中。
 
-- **Web-Fonts**
+- **网络字体**
 
-    Powered by [Font-Spider](https://github.com/aui/font-spider).
+[Font-Spider](https://github.com/aui/font-spider) 提供支持。
 
-## Installation
+## 使用本主题
 
-- **Install**
+- **安装**
 
     ``` bash
-    $ git submodule add https://github.com/GenkunAbe/hugo-theme-hiruko.git themes/hiruko
+    $ git submodule add https://github.com/DivinerHJF/hugo-theme-divine.git themes/divine
     ```
 
-- **Enable**
+- **开启**
 
-    Add `theme = "hiruko"` in `config.toml`.
+将 `theme = "divine"` 加入到 `config.toml` 中。
 
-- **Update**
+- **更新**
 
     ``` bash
     git submodule update --recursive --remote

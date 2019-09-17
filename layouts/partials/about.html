@@ -2,7 +2,7 @@
   <div class="post">
     <article class="post-block">
         <h1 class="post-title">{{ .Title }}</h1>
-        <div class="post-info">{{ .Date.Format "Jan 2 2006" }}</div>
+        <!-- <div class="post-info">{{ .Date.Format "Jan 2 2006" }}</div> -->
         <div class="post-entry">{{ .Content }}</div>
     </article>
   </div>
@@ -13,8 +13,11 @@
     <p class="about-me-text">{{ $.Site.Params.AboutMe.Motto }}</p>
   </div>
   <div class="follow-me widget">
-    <h3 class="aside-title">FOLLOW ME</h3>
+    <h3 class="aside-title">CONTACT ME</h3>
     <div class="follow-icons">
+      <a href="mailto:haojianfeng1997@gmail.com" class="mail-link" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+      <i class="fa fa-envelope-open"></i>
+      </a>
       {{- range $item := $.Site.Params.AboutMe.Links }}
       <a href="{{ index $item 1 }}" target="_blank" class="{{ index $item 0 }}"></a>
       {{- end }}

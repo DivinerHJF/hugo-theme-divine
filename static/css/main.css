@@ -1026,6 +1026,15 @@ h3.aside-title {
   opacity: 0.8;
 }
 
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    margin: 10px;
+    -webkit-font-smoothing: antialiased;
+}
+
 .github-link::after {
   font-family: FontAwesome;
   content: "\f09b";
