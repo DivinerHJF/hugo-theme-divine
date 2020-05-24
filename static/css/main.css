@@ -512,8 +512,9 @@ a.fancybox, a.fancybox::after, a.fancybox:hover, a.fancybox:hover::after {
 }
 
 .post-entry h2 {
-  font-size: 1.5rem;
-  margin-top: 2rem;
+  font-size: 22px;
+  text-align: center;
+  margin: 50px 0 30px;
 }
 
 .post-entry h3 {
