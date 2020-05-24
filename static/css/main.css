@@ -540,6 +540,10 @@ a.fancybox, a.fancybox::after, a.fancybox:hover, a.fancybox:hover::after {
   clear: both;
 }
 
+blockquote:not(:hover) {
+  border-left-color: transparent;
+}
+
 .post-entry blockquote {
   margin-bottom: 20px;
 }
@@ -644,7 +648,7 @@ a.fancybox, a.fancybox::after, a.fancybox:hover, a.fancybox:hover::after {
 
 .post-entry pre {
   margin-bottom: 30px;
-  background: #fafafa;
+  background: #f6f8fa;
 }
 
 .post-entry pre,
@@ -652,12 +656,15 @@ a.fancybox, a.fancybox::after, a.fancybox:hover, a.fancybox:hover::after {
   font-family: var(--mono-font);
   font-size: 1.15rem;
   white-space: pre;
-  border: 0px;
-  border-radius: 0px;
+  border-color: #ddd;
+  border-radius: 5px;
 }
 
 .post-entry code {
   margin: 8px 4px;
+  background-color: #f6f8fa;
+  font-size: 0.85em;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
 .post-entry p code {
