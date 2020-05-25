@@ -378,7 +378,7 @@ h1.prince-log a {
   font-family: var(--sans-font);
   font-weight: 400;
   font-size: 0.75rem;
-  color: #797979;
+  color: #555;
   text-transform: none;
   text-align: center;
   letter-spacing: .6px;
@@ -785,7 +785,7 @@ a.article-more {
   padding-left: 10px;
   text-transform: none;
   letter-spacing: 1px;
-  color: #797979;
+  color: #555;
   transition: .3s;
 }
 
@@ -817,7 +817,7 @@ a.article-more:hover {
 .post-tags-box a {
   font-family: var(--sans-font);
   font-weight: 400;
-  color: #797979;
+  color: #555;
   line-height: 32px;
   text-transform: none;
 }
@@ -943,7 +943,7 @@ aside.sidebar {
   font-family: var(--sans-font);
   font-weight: 400;
   font-size: 0.75rem;
-  color: #797979;
+  color: #555;
   line-height: 32px;
   text-transform: none;
 }

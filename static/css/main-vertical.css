@@ -1,6 +1,4 @@
-@import url('https://fonts.proxy.ustclug.org/css?family=Oswald:400,600');
-@import url('https://fonts.proxy.ustclug.org/css?family=Noto+Serif+SC:400,600,900&subset=chinese-simplified');
-@import url('https://fonts.proxy.ustclug.org/css?family=EB+Garamond:400,500,600,700,800');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400;600;900&family=Oswald:wght@400;600&display=swap');
 
 :root {
   --serif-font: 'EB Garamond', 'Noto Serif SC', 'Source Han Serif SC', source-han-serif-sc, FangSong, STFangsong, KaiTi, STKaiti, serif;
