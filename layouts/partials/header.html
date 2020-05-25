@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   {{ $isHomePage := eq .Title .Site.Title }}
   <title>{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
-  <meta name="description" content="{{ .Description }}">
-  <meta name="keywords" content="{{ .Keywords }}">
-  <meta name="author" content="{{ .Site.Author.name }}">
+  <meta name="description" content="{{ $.Site.Params.Description }}">
+  <meta name="keywords" content="{{ $.Site.Params.Keywords }}">
+  <meta name="author" content="{{ $.Site.Params.Author }}">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#e0e0e0">
