@@ -6,6 +6,8 @@
 
     {{- if eq .Params.type "about" -}}
     {{ partial "about.html" . }}
+    {{- else if eq .Params.type "gallery" -}}
+    {{ partial "gallery.html" . }}
     {{ else -}}
     {{ partial "post.html" . }}
     {{ end -}}
