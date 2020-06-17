@@ -10,10 +10,6 @@
     {{ partial "post.html" . }}
     {{ end -}}
 
-    {{ if eq .Params.toc true -}}
-    {{ partial "toc.html" . }}
-    {{ end -}}
-
     {{ if eq .Params.vertical true -}}
     {{ partial "footer.html" . }}
     {{ end -}}

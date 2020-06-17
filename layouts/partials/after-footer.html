@@ -91,23 +91,6 @@
 });</script>
 {{- end }}
 
-{{- if eq .Params.toc true }}
-<script>
-    if (typeof show_toc == 'undefined') {
-        var show_toc = true;
-    }
-    if (show_toc) {
-        $("#toc").tocify({
-            selectors: "h2,h3,h4,h5", // 选择要筛选的标题
-            extendPage: false, // 页面不够长时拉长页面，这里选择关闭因为感觉留出大片空白不好看 - -
-            highlightDefault: true, // 自动高亮第一条
-            highlightOnScroll: true,
-            scrollTo: 80,
-        });
-    }
-</script>
-{{- end }}
-
 <script type="text/javascript" src="/js/instantclick.js" data-no-instant></script>
 <script data-no-instant>InstantClick.init();</script>
 </body>
