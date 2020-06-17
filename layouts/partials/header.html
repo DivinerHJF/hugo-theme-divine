@@ -24,9 +24,9 @@
   <link rel="stylesheet" href="{{ $.Site.Params.CDN.JQueryTocify.Path }}/jquery.tocify/{{ $.Site.Params.CDN.JQueryTocify.Version }}/stylesheets/jquery.tocify.min.css">
   {{- end }}
   {{- if eq .Params.vertical true }}
-  <link rel="stylesheet" href="/css/main-vertical.css">
+  <link rel="stylesheet" href="/css/main-vertical.css" media="print" onload="this.media='all'">
   {{- else }}
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/main.css" media="print" onload="this.media='all'">
   {{- end }}
 
   <script src="{{ $.Site.Params.CDN.JQuery.Path }}/jquery/{{ $.Site.Params.CDN.JQuery.Version }}/jquery.min.js"></script>
