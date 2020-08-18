@@ -85,10 +85,16 @@
 {{- range .Params.codes }}
 <script src="{{ $.Site.Params.CDN.HighLight.Path }}/highlight.js/{{ $.Site.Params.CDN.HighLight.Version }}/languages/{{ . }}.min.js"></script>
 {{- end }}
-<script>hljs.initHighlightingOnLoad();</script>
-<script>hljs.initLineNumbersOnLoad({
-    singleLine: true
-});</script>
+$('pre code').each(function(i, block) {
+    try{
+        hljs.highlightBlock(block);
+        hljs.initLineNumbersOnLoad({
+            singleLine: true
+        });
+    }catch(e){
+
+    }
+});
 {{- end }}
 
 <script type="text/javascript" src="/js/instantclick.js" data-no-instant></script>
