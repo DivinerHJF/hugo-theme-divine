@@ -85,7 +85,15 @@
 {{- range .Params.codes }}
 <script src="{{ $.Site.Params.CDN.HighLight.Path }}/highlight.js/{{ $.Site.Params.CDN.HighLight.Version }}/languages/{{ . }}.min.js"></script>
 {{- end }}
-<script>hljs.initHighlightingOnLoad();</script>
+<script>
+    $('pre code').each(function(i, block) {
+        try{
+            hljs.highlightBlock(block);
+        }catch(e){
+
+        }
+    });
+</script>
 <script>hljs.initLineNumbersOnLoad({
     singleLine: true
 });</script>
