@@ -8,10 +8,6 @@
   --quote-font:'STKaiti', 'KaiTi', '楷体', 'SimKai', 'DFKai-SB', 'NSimSun', serif;
 }
 
-.dark-mode {
-  filter: invert(0.85)
-}
-
 *,
 html,
 body,

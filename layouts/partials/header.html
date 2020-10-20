@@ -31,5 +31,17 @@
   {{- if eq .Params.image true }}
   <script src="{{ $.Site.Params.CDN.FancyBox.Path }}/fancybox/{{ $.Site.Params.CDN.FancyBox.Version }}/jquery.fancybox.min.js"></script>
   {{- end }}
+
+  <!--自动匹配系统黑暗模式-->
+  <style>
+    @media (prefers-color-scheme: dark) {
+      html {
+        filter: invert(0.85) hue-rotate(180deg)
+      }
+      .about-me-image, img, picture, video {
+        filter: invert(1) hue-rotate(180deg)
+      }
+    }
+  </style>
 </head>
 <body>
