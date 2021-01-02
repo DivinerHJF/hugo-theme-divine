@@ -602,12 +602,12 @@ blockquote:not(:hover) {
 
 .post-entry ul li {
   margin-bottom: 8px;
-  list-style: square;
+  list-style: unset;
 }
 
 .post-entry ol li {
   margin-bottom: 8px;
-  list-style: decimal;
+  list-style: unset;
 }
 
 .post-entry dt {
