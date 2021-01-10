@@ -22,7 +22,6 @@
 				<div class="all-tags-box">
 					{{- range $name, $taxonomy := .Site.Taxonomies.categories }}
 					<a class="category-link" href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>
-					<br>
 					{{- end }}
 				</div>
 			</div>
